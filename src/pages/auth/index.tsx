@@ -21,7 +21,7 @@ export default function Auth() {
       <div className="max-w-7xl m-auto">
         <Navbar />
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-          <div className="text-white text-center flex gap-3">
+          <div className="text-white text-center flex gap-3 mb-2">
             <div className="text-4xl font-bold">欢迎来到LetCode</div>
             <button
               type="button"
@@ -30,8 +30,8 @@ export default function Auth() {
             >
               开始做题
             </button>
-            <VerificationCodeButton onSendCode={handleSendCode} countdownSeconds={5} />
           </div>
+          <VerificationCodeButton onSendCode={handleSendCode} countdownSeconds={5} />
         </div>
         <AuthModal />
       </div>
