@@ -29,7 +29,12 @@ const VerificationCodeButton: React.FC<VerificationCodeButtonProps> = ({ onSendC
   }
 
   return (
-    <button onClick={handleSendCode} disabled={isCounting} style={{ cursor: isCounting ? 'not-allowed' : 'pointer' }}>
+    <button
+      onClick={handleSendCode}
+      disabled={isCounting}
+      style={{ cursor: isCounting ? 'not-allowed' : 'pointer' }}
+      className="border rounded p-2 text-white"
+    >
       {isCounting ? `${countdown}秒后重新发送` : '发送验证码'}
     </button>
   )
